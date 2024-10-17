@@ -30,8 +30,8 @@ public class Main {
         // Exercise 4
         System.out.println("# Exercise 4:");
         AtomicLong factorial = new AtomicLong(1);
-        java.util.stream.IntStream.range(1, number).forEach(i -> {
-            factorial.updateAndGet(v -> v * i);
+        java.util.stream.IntStream.range(1, 10).forEach(i -> {
+            factorial.updateAndGet(v -> v * number);
             System.out.println("The factorial of " + number + " is " + factorial.toString());
         });
 
@@ -94,8 +94,8 @@ public class Main {
         int sum = number1 + number2;
         AtomicLong factorial = new AtomicLong(1);
 
-        java.util.stream.IntStream.range(1, sum).forEach(i -> {
-            factorial.updateAndGet(v -> v * i);
+        java.util.stream.IntStream.range(1, 10).forEach(i -> {
+            factorial.updateAndGet(v -> v * sum);
             System.out.println("The factorial of " + number1 + " and " + number2 + " is " + factorial.toString());
         });
     }
